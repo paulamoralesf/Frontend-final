@@ -28,11 +28,12 @@ class ContenedorGeneral extends Component{
                     </div>
                 </body>
                 </html>
+                
                 <div className="Tarjetas-contenedor">
                     <ul>
                     <li>    
                     <div className="Tarjeta">
-                        <Link to= {'./doctors/'}><img src="https://torremedicametropolitana.com.mx/wp-content/uploads/2018/03/slider-doc.jpg" className="cardMedicos" alt="..."/></Link>
+                        <Link to= {'./doctor/'}><img src="https://torremedicametropolitana.com.mx/wp-content/uploads/2018/03/slider-doc.jpg" className="cardMedicos" alt="..."/></Link>
                         <div className="card-body">
                             <p className="card-text">Medicos</p>
                         </div>
@@ -40,7 +41,7 @@ class ContenedorGeneral extends Component{
                     </li>
                     <li>
                     <div className="Tarjeta">
-                        <Link to= {'./patients/'}><img src="https://i2.wp.com/www.mortaji.com/wp-content/uploads/2017/11/Relaci%C3%B3n-medico-paciente3.png?fit=560%2C315&ssl=1" className="cardPacientes" alt="..."/></Link>
+                        <Link to= {'./patient/'}><img src="https://i2.wp.com/www.mortaji.com/wp-content/uploads/2017/11/Relaci%C3%B3n-medico-paciente3.png?fit=560%2C315&ssl=1" className="cardPacientes" alt="..."/></Link>
                         <div className="card-body">
                             <p className="card-text">Pacientes</p>
                         </div>
@@ -48,14 +49,14 @@ class ContenedorGeneral extends Component{
                     </li>
                     <li>
                     <div className="Tarjeta">
-                        <Link to= {'./medicines/'}><img src="https://www.yucatan.com.mx/wp-content/uploads/2018/08/f%C3%A1rmacos.jpg" className="cardFarmacos" alt="..."/></Link>  
+                        <Link to= {'./medicine/'}><img src="https://www.yucatan.com.mx/wp-content/uploads/2018/08/f%C3%A1rmacos.jpg" className="cardFarmacos" alt="..."/></Link>  
                         <div className="card-body">
                             <p className="card-text">Farmacos</p>
                         </div>
                     </div>
                     </li>
                     </ul>
-                </div>              
+                </div>
             </div>       
         )
     }

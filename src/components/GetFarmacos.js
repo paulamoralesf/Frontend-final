@@ -2,12 +2,13 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import Cards from './Cards';
 
+
 class GetFarmacos extends Component{
     constructor(props){
         super(props);
         this.state={
             farmacos:[],
-            modify:true
+            caso:2
         }
     }
     componentDidMount(){
@@ -26,7 +27,7 @@ class GetFarmacos extends Component{
             map(farmaco=>
                 <Cards    
                     nombre={farmaco.nombre} presentacion={farmaco.presentacion}
-                     imagen={farmaco.imagen}
+                     imagen={farmaco.imagen} caso={farmaco.caso}
                 />)   
             
     }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import Cards from './Cards';
+import RegisterPatients from './RegisterPatients';
 
 
 class GetPacientes extends Component{
@@ -8,13 +9,14 @@ class GetPacientes extends Component{
         super(props);
         this.state={
             pacientes:[],
-            modify:true
+            caso:1
         }
     }
     componentDidMount(){
         axios.get('https://thawing-stream-58754.herokuapp.com/api/v1/patients')//https://intense-gorge-64301.herokuapp.com/
         .then ((result)=>{
-            this.setState({pacientes:result.data})     
+            this.setState({pacientes:result.data})
+                 
         })
         .catch((err)=>{
             alert('Error')
@@ -26,8 +28,9 @@ class GetPacientes extends Component{
             : this.state.pacientes.
             map(paciente=>
                 <Cards    
-                    nombre={paciente.nombre} id={paciente.CC}
+                    nombre={paciente.nombre} CC={paciente.CC}
                     edad={paciente.edad} imagen={paciente.foto}
+                    caso={paciente.caso} id={paciente._id}
                 />
             )       
                    
@@ -38,7 +41,6 @@ class GetPacientes extends Component{
         return(
             <div>
                 {this.renderPacientes()}
-            
             </div>
         )
     }

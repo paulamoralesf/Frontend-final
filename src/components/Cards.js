@@ -4,6 +4,12 @@ import './Cards.css';
 
 
 class Cards extends Component{
+    redireccionar=()=>{
+        return this.props.caso==1
+                ? <Link to= {`./${this.props.id}`}>Ver</Link>
+                : <Link to= {`./${this.props.id}`}>Ver</Link>
+    }
+
 
     render(){
         return(
@@ -12,10 +18,11 @@ class Cards extends Component{
                 <div className="card-body">
                     <p align="center" className="card-text">
                     {this.props.nombre} <br/>
-                    {this.props.id}<br/>
+                    {this.props.CC}<br/>
                     {this.props.esp} <br/>
                     
                     </p>
+                    {this.redireccionar()}
                 </div>
       </div>
 

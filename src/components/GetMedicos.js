@@ -7,7 +7,7 @@ class GetMedicos extends Component{
         super(props);
         this.state={
             medicos:[],
-            modify:true
+            caso:3
         }
     }
     componentDidMount(){
@@ -26,7 +26,7 @@ class GetMedicos extends Component{
             map(medico=>
                 <Cards    
                     nombre={medico.nombre} id={medico.TP}
-                     imagen={medico.foto} esp={medico.especialidad}
+                     imagen={medico.foto} esp={medico.especialidad} caso={medico.caso}
                 />
                 )   
             

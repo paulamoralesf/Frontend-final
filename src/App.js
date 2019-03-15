@@ -10,6 +10,10 @@ import Cards from './components/Cards'
 import ContenedorGeneral from './components/ContenedorGeneral.js'
 import GetMedicos from './components/GetMedicos'
 import GetPacientes from './components/GetPacientes'
+import RegisterPatients from './components/RegisterPatients'
+import RegisterMedicines from './components/RegisterMedicines'
+import RegisterDoctors from './components/RegisterDoctors'
+import ReadPatient from './components/ReadPatient'
 import {BrowserRouter,Route} from 'react-router-dom';
 import GetFarmacos from './components/GetFarmacos';
 
@@ -17,29 +21,18 @@ class App extends Component {
 
   render() {
     return (
-      /*<div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>*/
       <BrowserRouter>
       <div>
           <main>
             <Route exact path='/' component={ContenedorGeneral}/>
-            <Route exact path='/doctors/' component={GetMedicos}/>
-            <Route exact path='/patients/' component={GetPacientes}/>
-            <Route exact path='/medicines/' component={GetFarmacos}/>
+            <Route exact path='/doctor/' component={GetMedicos}/>
+            <Route exact path='/patient/' component={GetPacientes}/>
+            <Route exact path='/medicine/' component={GetFarmacos}/>
+            <Route exact path='/createpatients/' component={RegisterPatients}/>
+            <Route exact path='/createmedicines/' component={RegisterMedicines}/>
+            <Route exact path='/createdoctors/' component={RegisterDoctors}/>
+            <Route exact path='/patient/:uid' component={ReadPatient}/>
+
           </main>
       </div>
       </BrowserRouter>
