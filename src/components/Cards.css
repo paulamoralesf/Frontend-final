@@ -1,0 +1,19 @@
+:root{
+    --oscuro:#212121;
+    --primario:#ffc107;
+    --secundario:#0097a7;
+    --anchoPantalla: 1200px;
+    --gris: #757575;
+}
+
+.Tarjetas-contenedor img{
+    height: 300px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem; 
+    box-direction: center;
+    -webkit-box-shadow: 0px 9px 42px -4px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 9px 42px -4px rgba(0,0,0,0.6);
+    box-shadow: 0px 9px 42px -4px rgba(0,0,0,0.6);  
+}
+
